@@ -32,9 +32,10 @@ export default function JourneyDetail() {
       <div className="mb-4">
         <strong className="text-xl">{journey.name}</strong>
         <p>{journey.description}</p>
+        <p>{journey.ai_response}</p>
       </div>
       <div className="flex gap-4">
-        <Link to={`/update/${journey.id}`} className="bg-blue-500 text-white p-2 rounded">Modifier</Link>
+        <Link to={`/update/${journey.id}`} className="bg-blue-500 text-white p-2 rounded">Modifier</Link>&nbsp;
         <button onClick={handleDelete} className="bg-red-500 text-white p-2 rounded">Supprimer</button>
       </div>
     </div>
