@@ -12,7 +12,8 @@ export default function ChatWithMistral() {
     setLoading(true);
     try {
       const { data } = await axios.post("http://127.0.0.1:8070/journey/chat", {
-        message: `Nom: ${name}, Description: ${description}`,
+        name,
+        description
       });
       setResponse(data.response);
     } catch (error) {
